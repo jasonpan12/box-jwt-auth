@@ -3,9 +3,7 @@ Usage
 download the repository as a folder
 
 
-from terminal
-
-  change directory to your folder
+  from terminal, change directory to your folder
   
   execute 'npm install' to load dependencies from package.json
   
