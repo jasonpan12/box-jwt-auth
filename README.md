@@ -29,7 +29,7 @@ Run this from the home directory of this repository to install the dependencies
 ```js
 npm install
 ```
-Run this to execute the code. An access token for the service account will be returned.
+Run this to execute the code. An access token for the service account will be returned
 ```js
 node json.js
 ```
