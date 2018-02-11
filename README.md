@@ -35,3 +35,20 @@ To specify a user token, add an argument "user" and then a value for the user ID
 ```js
 node json.js user --id=user_id_here
 ```
+The following is also acceptable
+```js
+node json.js user -i=user_id_here
+```
+
+Help
+-----------
+This module also supports usage of --help flags. Use this if you forget exactly what arguments to include.
+
+```js
+node json.js --help
+```
+Or
+```js
+node json.js user --help
+```
+
