@@ -9,6 +9,7 @@ Includes:
 - Reading in a config.json file
 - JWT Creation
 - A POST to https://api.box.com/
+- Logic for accepting arguments via yargs
 
 Basic Usage
 -----------
