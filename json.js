@@ -7,7 +7,7 @@ const yargs = require('yargs'); // read in arguments, i.e. "user" to specify use
 const _ = require('lodash');
 
 // Read in config.json from developer console
-var boxConfig = JSON.parse(fs.readFileSync('CLI_config.json'));
+var boxConfig = JSON.parse(fs.readFileSync('config.json'));
 
 // Read in arguments
 const argv=yargs.argv;
