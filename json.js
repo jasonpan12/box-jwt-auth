@@ -7,20 +7,20 @@ const yargs = require('yargs'); // read in arguments, i.e. "user" to specify use
 const _ = require('lodash'); // process data types 'n such
 
 // Read in config.json from developer console
-var boxConfig = JSON.parse(fs.readFileSync('CLI_config.json'));
+var boxConfig = JSON.parse(fs.readFileSync('config.json'));
 
 // Read in arguments
 const argv=yargs
   .command('user', 'Specify getting a user token instead of an enterprise token', { // allow description of commands/parameters
-    user: { //user command has user property under it, which is an obj
+    id: { //user command has user property under it, which is an obj
       describe: 'The user ID to use for the access token',
-      demand: false, // don't require it
-      alias: 'u' // allow use of -u flag instead of --user
+      demand: true, // if use the user argument, an id is required
+      alias: 'i' // allow use of -i flag instead of --user
     }
   })
   .help() // allow help flag to be used
   .argv;
-var command = argv._[0] //command is first index / first argument passed 
+var command = argv._[0] //command is first index / first argument passed
 
 // Set box_sub_type based on whether command exists or not
 var subType = (command) => {
