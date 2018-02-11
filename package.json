@@ -11,6 +11,8 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "jsonwebtoken": "^8.1.0",
-    "request": "^2.83.0"
+    "lodash": "^4.17.5",
+    "request": "^2.83.0",
+    "yargs": "^11.0.0"
   }
 }
