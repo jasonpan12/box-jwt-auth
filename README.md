@@ -13,6 +13,8 @@ Includes:
 Basic Usage
 -----------
 
+1. Download [node.JS](nodejs.org)
+
 1. Download your config file obtained from [Section 1 of Box's JWT Guide](https://developer.box.com/v2.0/docs/authentication-with-jwt#section-1-generate-an-rsa-keypair-in-the-developer-console) 
   1. Rename the config file from "xxx_xxx_config.json" to just "config.json" and put it in the home directory of this repository wherever you've downloaded it.
 
