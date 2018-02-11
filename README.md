@@ -28,3 +28,7 @@ Run this to execute the code. An access token for the service account will be re
 ```js
 node json.js
 ```
+To specify a user token, add an argument "user" and then a value for the user ID, like so
+```js
+node json.js user --id=user_id_here
+```
