@@ -11,7 +11,7 @@ Includes:
 - A POST to https://api.box.com/
 - Logic for accepting arguments via yargs
 
-Basic Usage
+Basic Setup
 -----------
 
 1. Download and install [node.JS](https://nodejs.org/en/).
@@ -22,7 +22,8 @@ Basic Usage
 
 1. Complete step 2 of the JWT Guide.
 
-1. At step 3, you can use this instead to test getting access tokens.
+Basic Usage
+-----------
 
 Run this from the home directory of this repository to install the dependencies
 ```js
