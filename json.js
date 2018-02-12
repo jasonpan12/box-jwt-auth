@@ -76,11 +76,13 @@ var getAccessToken = (jwt) => {
           client_id: boxConfig.boxAppSettings.clientID,
           client_secret: boxConfig.boxAppSettings.clientSecret,
           assertion: jwt
-      }
+      },
+      json: true
   };
   request(options, function (error, response, body) {
   console.log('statusCode:', response && response.statusCode);
-  console.log('body:', body);
+  console.log('body:');
+  console.log(JSON.stringify(body, undefined, 2));
 });
 };
 
