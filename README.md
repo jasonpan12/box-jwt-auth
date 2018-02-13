@@ -16,7 +16,7 @@ Basic Setup
 
 1. Download and install [node.JS](https://nodejs.org/en/).
 
-1. Download your app's config file using steps 1-4 from [Box's Command Line Interface Guide](https://developer.box.com/v2.0/docs/box-cli#section-initial-setup). Alternatively, use [Section 1 and 2 of Box's JWT Guide](https://developer.box.com/v2.0/docs/authentication-with-jwt#section-1-generate-an-rsa-keypair-in-the-developer-console). 
+1. Download your app's config file using steps 1-4 from [Box's Command Line Interface Guide](https://developer.box.com/v2.0/docs/box-cli#section-initial-setup). Alternatively, use [Section 1 and 2 of Box's JWT Guide](https://developer.box.com/v2.0/docs/authentication-with-jwt#section-1-generate-an-rsa-keypair-in-the-developer-console).
 
 1. Rename the config file from "xxx_xxx_config.json" to just "config.json" and put it in the home directory of your repository.
 
@@ -33,11 +33,11 @@ node json.js
 ```
 To specify a user token, add an argument "user" and then a value for the user ID, like so
 ```js
-node json.js user --id=user_id_here
+node json.js user -id=user_id_here
 ```
-The following is also acceptable
+The following is also acceptable (note the two dashes instead of one)
 ```js
-node json.js user -i=user_id_here
+node json.js user --i=user_id_here
 ```
 
 Help
@@ -51,4 +51,3 @@ Or
 ```js
 node json.js user --help
 ```
-
