@@ -31,14 +31,16 @@ Run this to execute the code. An access token for the service account will be re
 ```js
 node json.js
 ```
-To specify a user token, add an argument "user" and then a value for the user ID, like so
+To specify a user token, specify value for the user ID, like so
 ```js
-node json.js user --id=user_id_here
+node json.js --id=user_id_here
 ```
 Note the 2 dashes in the above example. The following is also acceptable
 ```js
-node json.js user -i=user_id_here
+node json.js -i=user_id_here
 ```
+
+If no ID is provided, the application will assume an enterprise token.
 
 Help
 -----------
