@@ -11,7 +11,7 @@ var boxConfig = JSON.parse(fs.readFileSync('config.json'));
 
 // Read in arguments
 const argv=yargs
-  .command('user', 'Specify getting a user token instead of an enterprise token', { // allow description of commands/parameters
+  .options({ // allow description of commands/parameters
     i: { //user command has user property under it, which is an obj
       describe: 'The user ID to use for the access token',
       demand: true, // if use the user argument, an id is required
@@ -21,33 +21,35 @@ const argv=yargs
   })
   .help() // allow help flag to be used
   .argv;
-var command = argv._[0] //command is first index / first argument passed
+var option = argv.i; //command is first index / first argument passed
+// console.log(argv); use this to debug arguments being passed in
+// debugger;
 
 // Set box_sub_type based on whether command exists or not
-var subType = (command) => {
-  if (command) { // if command exists, make box_sub_type user
+var subType = (option) => {
+  if (option) { // if command exists, make box_sub_type user
     return 'user';
   } else { // if not, assume enterprise
     return 'enterprise';
   }
-}
+};
 
 // Same idea, but with sub
-var sub = (command) => {
-  if (command) { // if a command exists, take the id as sub value
-    return argv.id; // don't need to lodash to string this because string is true in command options
+var sub = (option) => {
+  if (option) { // if a command exists, take the id as sub value
+    return option; // don't need to lodash to string this because string is true in command options
   } else { // if not, assume enterprise id from config file
     return boxConfig.enterpriseID;
   }
-}
+};
 
 // Create your JWT
 var boxJWT = () => {
   var token = jwt.sign(
     { // Claims aka Payload defined here. Use https://developer.box.com/v2.0/docs/construct-jwt-claim-manually#section-6-constructing-the-claims for reference.
       iss: boxConfig.boxAppSettings.clientID,
-      sub: sub(command),
-      box_sub_type: subType(command),
+      sub: sub(option),
+      box_sub_type: subType(option),
       aud: "https://api.box.com/oauth2/token",
       jti: crypto.randomBytes(20).toString('hex'),
       exp: Math.floor(Date.now() / 1000) + (60)
