@@ -33,11 +33,11 @@ node json.js
 ```
 To specify a user token, add an argument "user" and then a value for the user ID, like so
 ```js
-node json.js user -id=user_id_here
+node json.js user --id=user_id_here
 ```
-The following is also acceptable (note the two dashes instead of one)
+Note the 2 dashes in the above example. The following is also acceptable
 ```js
-node json.js user --i=user_id_here
+node json.js user -i=user_id_here
 ```
 
 Help
