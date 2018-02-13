@@ -12,10 +12,11 @@ var boxConfig = JSON.parse(fs.readFileSync('config.json'));
 // Read in arguments
 const argv=yargs
   .command('user', 'Specify getting a user token instead of an enterprise token', { // allow description of commands/parameters
-    id: { //user command has user property under it, which is an obj
+    i: { //user command has user property under it, which is an obj
       describe: 'The user ID to use for the access token',
       demand: true, // if use the user argument, an id is required
-      alias: 'i' // allow use of -i flag instead of --user
+      alias: 'id', // allow use of -i flag instead of --user
+      string: true // force input to be a string
     }
   })
   .help() // allow help flag to be used
@@ -34,7 +35,7 @@ var subType = (command) => {
 // Same idea, but with sub
 var sub = (command) => {
   if (command) { // if a command exists, take the id as sub value
-    return _.toString(argv.id);
+    return argv.id; // don't need to lodash to string this because string is true in command options
   } else { // if not, assume enterprise id from config file
     return boxConfig.enterpriseID;
   }
