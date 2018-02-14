@@ -14,7 +14,7 @@ const argv=yargs
   .options({ // allow description of commands/parameters
     i: { //user command has user property under it, which is an obj
       describe: 'The user ID to use for the access token',
-      demand: true, // if use the user argument, an id is required
+      demand: false, // no user requirement
       alias: 'id', // allow use of -i flag instead of --user
       string: true // force input to be a string
     }
