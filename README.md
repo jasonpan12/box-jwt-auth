@@ -35,9 +35,9 @@ To specify a user token, specify value for the user ID, like so
 ```js
 node json.js --id=user_id_here
 ```
-Note the 2 dashes in the above example. The following is also acceptable
+Note the 2 dashes in the above example. The following is also acceptable (note that no '=' sign is required)
 ```js
-node json.js -i=user_id_here
+node json.js -i user_id_here
 ```
 
 If no ID is provided, the application will assume an enterprise token.
