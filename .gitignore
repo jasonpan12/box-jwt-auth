@@ -1,6 +1,6 @@
 # Specific Callouts #
 ######################
-config.json
+*config.json
 node_modules
 
 ###################
