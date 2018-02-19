@@ -2,7 +2,7 @@ Node.js example of JWT Auth
 ===================
 
 A quick demonstration of JWT creation and authorization on the [Box Content API](https://developers.box.com/docs/).
-Full description of Box's JWT requirements are available in the [manual JWT creation instructions](https://developer.box.com/v2.0/docs/construct-jwt-claim-manually).
+Full descriptions of Box's JWT requirements are available in the [manual JWT creation instructions](https://developer.box.com/v2.0/docs/construct-jwt-claim-manually).
 
 Includes:
 
