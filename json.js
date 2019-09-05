@@ -63,6 +63,7 @@ var boxJWT = () => {
       header: { kid: boxConfig.boxAppSettings.appAuth.publicKeyID },
     }
   );
+  // console.log(token);
   return token;
 };
 
@@ -88,6 +89,7 @@ var getAccessToken = (jwt) => {
   console.log(JSON.stringify(body, undefined, 2));
 });
 };
+
 
 // call the function now
 getAccessToken(boxJWT());
